@@ -26,29 +26,29 @@ const Navbar = () => {
     }
 
   return (
-    <nav className=' bg-[#EDEDED] p-4 h-16 flex items-center justify-between'>
+    <nav className=' bg-[#E5E5E5] p-4 h-16 flex items-center justify-between'>
         <Link to='/' className='text-black ml-10 font-bold text-xl' onClick={CloseMobileMenu}>
           Lando
          
         </Link>
-          <ul className='mx-5 flex space-x-10 items-center justify-between  gap-2'>
+          <ul className='mx-5 flex space-x-5 items-center  mr-4 justify-between  p-4'>
             <li>
              <Link
              to="/home"
-             className=''
+             className='mr-4 hover:text-blue '
              onClick={CloseMobileMenu}
              >
               Home
              </Link>
             </li>
             <li
-            className=''
+            className='mr-4'
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             >
              <Link
              to="/pricing"
-             className=''
+             className='mr-4'
              onClick={CloseMobileMenu}
              >
               Pricing  <i className='fas fa-caret-down' />
@@ -59,7 +59,7 @@ const Navbar = () => {
             <li>
              <Link
              to="/aboutus"
-             className=''
+             className='mr-4'
              onClick={CloseMobileMenu}
              >
               About
@@ -68,21 +68,26 @@ const Navbar = () => {
             <li>
              <Link
              to="/contact"
-             className=''
+             className='mr-4'
              onClick={CloseMobileMenu}
              >
               Contact
              </Link>
             </li>
+          </ul>
+            <div>
             <Link to="login">
-         <button>Login</button>
+          <button class="  text-black font-bold py-2 px-4 rounded">
+            Login
+          </button>
          </Link>
 
          <Link to="signup">
-         <button>Signup</button>
+         <button class="bg-[#3164F3] hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+              Signup
+            </button>
          </Link>
-          </ul>
-
+            </div>
          
     </nav>
   )
